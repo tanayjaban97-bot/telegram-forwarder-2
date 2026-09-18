@@ -35,19 +35,19 @@ def self_ping():
 
 Thread(target=self_ping, daemon=True).start()
 
-# --- CONFIGURATION (SECOND BOT) ---
+# --- CONFIGURATION (SECOND BOT UPDATED) ---
 API_ID = int(os.environ.get("API_ID", 0))
 API_HASH = os.environ.get("API_HASH", "")
 STRING_SESSION = os.environ.get("STRING_SESSION", "")
 
-# 1. New Source Channel
-SOURCE_CHAT = "@sixclubofficialchanel"  
+# 1. Updated Source Channel
+SOURCE_CHAT = "@crypto_dmfirstofficiall"  
 
-# 2. New Destination Channel
+# 2. Destination Channel
 DESTINATION_CHAT = "@predictionmasterhindi"
 
-# 3. New Referral Link
-MY_NEW_LINK = "https://kavyaclub99.web.id/?code=171703"
+# 3. Updated Game / Referral Link
+MY_NEW_LINK = "https://www.dmfirst13.com/#/register?invitationCode=52199550527"
 
 client = TelegramClient(StringSession(STRING_SESSION), API_ID, API_HASH)
 
@@ -56,7 +56,7 @@ def process_text(text):
         return ""
     # Replace external links with new referral link
     text = re.sub(r'https?://[^\s]+', MY_NEW_LINK, text)
-    # Replace telegram handles with new destination channel
+    # Replace telegram handles with destination channel
     text = re.sub(r't\.me/[^\s]+', DESTINATION_CHAT, text)
     return text
 
