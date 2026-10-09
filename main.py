@@ -149,4 +149,4 @@ async def main():
             await asyncio.sleep(3)
 
 if __name__ == "__main__":
-    async.run(main())
+    asyncio.run(main())
